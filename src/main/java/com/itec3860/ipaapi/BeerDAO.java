@@ -187,8 +187,6 @@ public class BeerDAO {
         return em.createNativeQuery(query).getResultList();
 
     }
-
-    //Steven
     public String findByHighestIbu() {
         Query sqlQuery = em.createNativeQuery("SELECT id, name, ibu FROM beers ORDER BY ibu DESC LIMIT 1");
         List<Object[]> results = sqlQuery.getResultList();
@@ -288,7 +286,6 @@ public class BeerDAO {
         return false;
     }
 
-    //Steven
 
     public Beer getRandomBeer() {
         Query sqlQuery = em.createNativeQuery("SELECT * FROM beers ORDER BY RAND() LIMIT 1", Beer.class);
